@@ -3,7 +3,7 @@
 * PostCSS: v8.4.14,
 * Autoprefixer: v10.4.7
 * Browsers: last 4 version
-
+*/
 
 
 
@@ -42,7 +42,10 @@
   margin-left: 15px;
 }
 
-
+form {
+  display: block;
+  margin-top: 0em;
+}
 
 
 
@@ -57,16 +60,21 @@ body {
 h1 {
     font-size: 30px;
     font-weight: 700;
+    text-decoration: underline;
+    
 }
 
 h2 {
     font-size: 24px;
     font-weight: 700;
+    text-align: center;
+    text-decoration: underline;
 }
 
 h3 {
     font-size: 18px;
     font-weight: 700;
+    text-decoration: underline;
 }
 
 .svg {
@@ -77,26 +85,42 @@ h3 {
 clicable links to be colored green at all times
  */
 a {
-    color: #3751ed;
+    color: #df2eb0;
 }
 
+span {
+  color: orange;
+  font-weight: bolder;
+  background-color: black;
+  padding: 3px;
+  border-radius: 20%;
+}
 /*
 once clicked and revist same page the links will turn to color below
  */
 a:visited {
-    color: undefined;
+    color: #e90b1a;
 }
 
 a:hover {
 
   text-decoration: none;
+  color: #de8c56;
+  font-size: larger;
+}
+
+.center {
+  
+  text-align: center;
+  font-weight: bold;
+  
 }
 
 
 /*
 no underline when hovering and able to tab through sections
  */
-a:hover, a:focus {
+  a:focus {
     text-decoration: none;
 }
 
@@ -105,7 +129,7 @@ once clicked it will turn green untill visited again
  */
 a:active {
     /* selected link */
-    color: undefined;
+    color: #489c79;
 }
 
 .profile {
@@ -121,7 +145,7 @@ a:active {
 }
 
 #profile-text {
-  padding: auto 20%;
+  padding: 20%;
 }
 
 
@@ -187,6 +211,7 @@ opacity: 0.8;
 .navigation-list li {
   display: inline-block;
   margin-left: 40px;
+  font-weight: bold;
 }
 
 .profile__portrait {
@@ -198,6 +223,7 @@ opacity: 0.8;
   max-width: 700px;
   margin: 70px auto;
   text-align: center;
+  font-weight: bold;
   /* display: flex;
   align-items: right;
   height: 50%; */
@@ -214,6 +240,7 @@ opacity: 0.8;
         -ms-flex-direction: column;
             flex-direction: column;
     text-align:center;
+    font-weight: bold;
 }
 
 .social-media {
@@ -251,99 +278,35 @@ opacity: 0.8;
 }
 
 .grid {
-  display: -ms-grid;
   display: grid;
 }
 
 .grid {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 300px 300px 300px;
   grid-template-columns: 300px 300px 300px;
-  -ms-grid-rows: 300px 300px;
   grid-template-rows: 300px 300px;
-}
-
-.grid > *:nth-child(1) {
-    -ms-grid-row: 1;
-    grid-row: 1;
-    -ms-grid-column: 1;
-    grid-column: 1;
-}
-
-.grid > *:nth-child(2) {
-    -ms-grid-row: 1;
-    grid-row: 1;
-    -ms-grid-column: 2;
-    grid-column: 2;
-}
-
-.grid > *:nth-child(3) {
-    -ms-grid-row: 1;
-    grid-row: 1;
-    -ms-grid-column: 3;
-    grid-column: 3;
-}
-
-.grid > *:nth-child(4) {
-    -ms-grid-row: 2;
-    grid-row: 2;
-    -ms-grid-column: 1;
-    grid-column: 4;
-}
-
-.grid > *:nth-child(5) {
-    -ms-grid-row: 2;
-    grid-row: 2;
-    -ms-grid-column: 2;
-    grid-column: 5;
-}
-
-.grid > *:nth-child(6) {
-    -ms-grid-row: 2;
-    grid-row: 2;
-    -ms-grid-column: 3;
-    grid-column: 6;
 }
 
 .grid__item {
   background-color: lightgray;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 .grid {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
 }
 
 .grid__item:last-child {
-  -ms-grid-column: 3;
-  grid-column: 3;
-      grid-column-start: 3;
-  -ms-grid-column-span: 0;
+  grid-column-start: 3;
   grid-column-end: 3;
-  -ms-grid-row: 1;
-  grid-row: 1;
-      grid-row-start: 1;
-  -ms-grid-row-span: 2;
+  grid-row-start: 1;
   grid-row-end: 3;
 }
 
-@-webkit-keyframes bird-move {
-  from {-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}
-  to {transfrom: translate(0px, 80px);}
-}
-
-@keyframes bird-move {
-  from {-webkit-transform: translate(0px, 50px);transform: translate(0px, 50px);}
-  to {transfrom: translate(0px, 80px);}
-}
-#path200, #path202, #path204, #path210, #path212, #path216  {
-  -webkit-animation: 4s bird-move infinite alternate linear;
-          animation: 4s bird-move infinite alternate linear;
-}
 
 .sun {
   -webkit-animation: 4s color-change infinite alternate linear;
